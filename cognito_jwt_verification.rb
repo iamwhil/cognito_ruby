@@ -19,7 +19,7 @@ class CognitoJWTVerifier
     @keys = JSON.parse(RAW_KEYS)['keys']
   end
 
-  def get_claims()
+  def validate_and_decrypt()
     # Retrieve the key id (kid) from the token headers.
     kid = get_kid_from(@token)
     # Find the key with kid in keys.
