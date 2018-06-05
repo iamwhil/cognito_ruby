@@ -4,7 +4,9 @@ This project serves as an example class for a backend AWS JSON Web Token (JWT) v
 
 ## Example
 
+```
 CognitoJWTVerification.new(token).validate_and_decrypt
+```
 
 ## Motivation
 
