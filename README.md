@@ -20,7 +20,7 @@ There are no additional examples.
 
 If you chose to pass the JWT back to your Ruby or Ruby on Rails based server, you need to validate the token's authenticity before trusting any of its claims. as explained in the AWS documentation.
 
-Currently this is an example class which goes through each of the validation tokens
+Currently this is an example class which goes through each of the validation steps.
 
 ## Installation
 
