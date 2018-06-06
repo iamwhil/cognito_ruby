@@ -1,52 +1,39 @@
-## Amazon Web Services (AWS) Cognito validator and decrypter
+# CognitoRuby
 
-This project serves as an example class for a backend AWS JSON Web Token (JWT) validation and decryption tool for Ruby.  
+Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/cognito_ruby`. To experiment with that code, run `bin/console` for an interactive prompt.
 
-## Example
-
-```
-CognitoJWTVerification.new(token).validate_and_decrypt
-```
-
-## Motivation
-
-When using AWS Cognito for user authentication, Cognito can respond with a JWT.  This JWT contains a header, payload and signature with pertinent data.  Before utilizing any of this data, it should be validated as authentic.
-
-The process is  explained here in a pseudo-code format: https://docs.aws.amazon.com/cognito/latest/developerguide/amazon-cognito-user-pools-using-tokens-with-identity-providers.html 
-
-AWS Lambda can can serve to validate and decrpty token, and https://github.com/awslabs/aws-support-tools/tree/master/Cognito/decode-verify-jwt provides an explanation of the validation and decryption process and examples in both Python and Node.js.
-
-There are no additional examples.
-
-If you chose to pass the JWT back to your Ruby or Ruby on Rails based server, you need to validate the token's authenticity before trusting any of its claims. as explained in the AWS documentation.
-
-Currently this is an example class which goes through each of the validation steps.
+TODO: Delete this and the text above, and describe your gem
 
 ## Installation
 
-Clone repo and require class.
+Add this line to your application's Gemfile:
 
-Setup:
-Get and store your public keys for Cognito from:
-https://cognito-idp.{region}.amazonaws.com/{userPoolId}/.well-known/jwks.json
+```ruby
+gem 'cognito_ruby'
+```
 
-## TODO 
+And then execute:
 
-I would like to turn this into a Gem for Ruby / ROR, however, this enough for one night.
-Goodnight moon.
+    $ bundle
 
-## Contributors
+Or install it yourself as:
 
-github: @IAmWhil
+    $ gem install cognito_ruby
 
-Feel free to fork this!
+## Usage
+
+TODO: Write usage instructions here
+
+## Development
+
+After checking out the repo, run `bin/setup` to install dependencies. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
+
+To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+
+## Contributing
+
+Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/cognito_ruby.
 
 ## License
 
-Copyright 2018 Whil Piavis
-
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
