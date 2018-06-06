@@ -5,13 +5,13 @@ require "cognito_ruby/version"
 
 Gem::Specification.new do |spec|
   spec.name          = "cognito_ruby"
-  spec.version       = CognitoRuby::VERSION
+  spec.version       = CognitoRuby::0.0.1
   spec.authors       = ["Whil Piavis"]
   spec.email         = ["ncsupiratecaptain@gmail.com"]
 
-  spec.summary       = %q{TODO: Write a short summary, because RubyGems requires one.}
-  spec.description   = %q{TODO: Write a longer description or delete this line.}
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.summary       = "Simple AWS Cognito JWT verify and decoder."
+  spec.description   = "Single class to verify and decode AWS Cognito JSON Web Tokens. Requires AWS Cognito to be setup and responding with tokens."
+  spec.homepage      = "https://www.github.com/iamwhil/cognito_ruby"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
