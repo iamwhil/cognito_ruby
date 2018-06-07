@@ -15,6 +15,8 @@ module CognitoRuby
 
     class << self
 
+      puts ENV["AWS_COGNITO_KEYS"]
+
       KEYS = JSON.parse(ENV['AWS_COGNITO_KEYS'])['keys'].freeze
 
       def validate_and_decrypt(token)
