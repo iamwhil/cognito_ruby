@@ -6,13 +6,13 @@ module CognitoRuby
   class CognitoJWTVerifier
 
     # Setup unique Amazon AWS settings
-    REGION = '' # AWS Region. Eg. us-west-2
-    ISS = "" # https://cognito-idp.{region}.amazonaws.com/{userPoolId}
+    REGION = ENV['AWS_REGION'] # AWS Region. Eg. us-west-2
+    ISS = ENV['AWS_ISS'] # https://cognito-idp.{region}.amazonaws.com/{userPoolId}
     TOKEN_USE_CLAIM = 'id'
 
     # Raw keys retrieved from 
     # https://cognito-idp.{region}.amazonaws.com/{userPoolId}/.well-known/jwks.json
-    RAW_KEYS = ''
+    RAW_KEYS = ENV['AWS_COGNITO_KEYS']
 
     def initialize(token)
       @token = token
