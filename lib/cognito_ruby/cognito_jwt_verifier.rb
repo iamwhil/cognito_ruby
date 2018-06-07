@@ -54,8 +54,8 @@ module CognitoRuby
           # How would I make this a struct? or 'wrap' it?
           # Struct.new(claims: claims, errors: error) does not work.
           # throws TypeError: no implicit conversion of Hash into String
-          return Struct.new(claims: claims, errors: error)
-          #return {claims: claims, errors: error} 
+          #return Struct.new(claims: claims, errors: error)
+          return {claims: claims, errors: error} 
         end
       end
 
